@@ -32,3 +32,8 @@ def get_data_file_path(file_name: str) -> str:
         raise FileNotFoundError(f'Filename {file_name} not found in {root_directory}')
 
     return full_path
+
+    if not path.exists(full_path):
+        raise FileNotFoundError(f'Filename {file_name} not found in {root_directory}')
+
+    return full_path
